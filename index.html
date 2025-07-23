@@ -3,213 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nulcast</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <title>Nulcast – Erasing the Noise</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg-gradient-start: #1e3c72;
-      --bg-gradient-end: #2a5298;
-      --text-primary: #ffffff;
-      --text-secondary: #d1d5db;
-      --accent: #00ffe5;
-      --highlight: #8dfdff;
-      --section-bg: #101820;
+      --bg-dark: #121212;
+      --bg-medium: #1e1e1e;
+      --bg-light: #2a2a2a;
+      --text-main: #f0f0f0;
+      --text-muted: #999;
+      --accent: #ffffff;
     }
 
     * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
     }
 
     body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
-      color: var(--text-primary);
-      overflow-x: hidden;
+      background: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
     }
 
     header {
-      padding: 100px 20px 60px;
+      background: var(--bg-medium);
+      padding: 2rem;
       text-align: center;
-      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
-      border-bottom: 2px solid var(--accent);
+      border-bottom: 1px solid #333;
     }
 
     header h1 {
-      font-size: 4rem;
+      font-size: 2.5rem;
       font-weight: 800;
-      margin-bottom: 10px;
-      color: var(--accent);
     }
 
     header p {
-      font-size: 1.4rem;
-      color: var(--text-secondary);
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin: 20px 0;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--highlight);
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: var(--text-primary);
+      margin-top: 0.5rem;
+      color: var(--text-muted);
     }
 
     section {
-      max-width: 1000px;
-      margin: 60px auto;
-      padding: 0 20px;
-      background: var(--section-bg);
-      border-radius: 12px;
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+      padding: 4rem 2rem;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
     section h2 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-      border-left: 6px solid var(--accent);
-      padding-left: 12px;
-      color: var(--highlight);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
     }
 
-    section p, li {
-      font-size: 1.1rem;
-      color: var(--text-secondary);
+    .research ul {
+      list-style: disc;
+      padding-left: 1.2rem;
+      color: var(--text-muted);
     }
 
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    ul li {
-      margin: 10px 0;
-      padding: 10px;
-      background: rgba(255, 255, 255, 0.05);
-      border-left: 4px solid var(--accent);
-      border-radius: 6px;
-    }
-
-    ul li a {
+    .research a {
       color: var(--accent);
       text-decoration: none;
-      font-weight: 500;
     }
 
-    ul li a:hover {
+    .research a:hover {
       text-decoration: underline;
     }
 
-    .donate-section {
-      background: #0c1a26;
-      padding: 60px 20px;
-      border-top: 2px solid var(--accent);
+    footer {
+      background: var(--bg-medium);
       text-align: center;
-    }
-
-    .donate-section h2 {
-      color: var(--text-primary);
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      border-top: 1px solid #333;
     }
 
     .gfm-embed {
-      margin-top: 30px;
-      max-width: 100%;
-    }
-
-    footer {
-      padding: 40px 20px;
-      background: #081018;
-      text-align: center;
-      border-top: 2px solid #111;
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-    }
-
-    .lines-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background-image: repeating-linear-gradient(
-        to right,
-        #fff 0px,
-        #fff 1px,
-        transparent 1px,
-        transparent 50px
-      );
-      opacity: 0.02;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
-
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      section h2 {
-        font-size: 1.6rem;
-      }
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
-  <div class="lines-bg"></div>
   <header>
     <h1>Nulcast</h1>
-    <p>Erasing ads. Reclaiming public space.</p>
-    <nav>
-      <a href="#what">About</a>
-      <a href="#why">Why</a>
-      <a href="#research">Research</a>
-      <a href="#donate">Donate</a>
-    </nav>
+    <p>Erasing the noise — one blank billboard at a time.</p>
   </header>
 
-  <section id="what">
-    <h2>What is Nulcast?</h2>
-    <p>Nulcast is a disruptive project by NADSTAT aimed at removing ads from your life. We buy up ad space—billboards, digital banners, bus stops—and leave it blank or with clean, thought-provoking text. It’s not art. It’s not activism. It’s clarity.</p>
+  <section>
+    <h2>Our Mission</h2>
+    <p>Nulcast, a NADSTAT initiative, is reclaiming public space from visual pollution by buying ad space and leaving it intentionally blank. Every empty billboard is a quiet protest against manipulation and over-commercialization. No logos. No slogans. Just space.</p>
   </section>
 
-  <section id="why">
-    <h2>Why We're Doing It</h2>
-    <p>Advertising is not neutral. It manipulates behavior, fuels overconsumption, and pollutes mental space. With Nulcast, we’re creating moments of silence in a world that screams for your attention.</p>
+  <section>
+    <h2>Why It Matters</h2>
+    <p>Studies show that constant advertising can negatively impact mental health, increase anxiety, and reduce attention spans. We aim to bring peace back into our environments — with your help.</p>
   </section>
 
-  <section id="research">
+  <section class="research" id="research">
     <h2>Studies on Advertising Harm</h2>
     <ul>
-      <li><a href="https://www.apa.org/news/press/releases/stress/2022/state-of-mental-health" target="_blank">APA – Chronic Stress & Media Overload</a></li>
-      <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8100152/" target="_blank">NIH – Ad Exposure & Mental Health</a></li>
-      <li><a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2019.00268/full" target="_blank">Frontiers in Psychology – Ads and Body Image</a></li>
-      <li><a href="https://www.tandfonline.com/doi/abs/10.1080/13527266.2017.1392923" target="_blank">Taylor & Francis – Cognitive Load from Outdoor Ads</a></li>
+      <li><a href="https://hbr.org/2020/01/advertising-makes-us-unhappy" target="_blank" rel="noopener noreferrer">HBR: Advertising Makes us Unhappy</a></li>
+      <li><a href="https://www.mqmentalhealth.org/adding-to-the-problem-advertising-and-mental-health/" target="_blank" rel="noopener noreferrer">MQ: Advertising and Mental Health</a></li>
+      <li><a href="https://appliedpsychologydegree.usc.edu/blog/thinking-vs-feeling-the-psychology-of-advertising" target="_blank" rel="noopener noreferrer">USC: The Psychology of Advertising</a></li>
     </ul>
   </section>
 
-  <section id="donate" class="donate-section">
-    <h2>Help Us Fund It</h2>
-    <p>Every dollar removes another ad from the world. You can help us buy ad space and keep it clean.</p>
+  <section>
+    <h2>Support the Movement</h2>
+    <p>Your donations directly fund ad space that we leave blank. Help us take back visual peace in public spaces.</p>
     <div class="gfm-embed" data-url="https://www.gofundme.com/f/help-nulcast-reclaim-public-spaces/widget/large?sharesheet=undefined&attribution_id=sl:38997f02-7cb1-41f9-a216-7a2a35200a7f"></div>
     <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
   </section>
 
   <footer>
-    &copy; 2025 Nulcast by NADSTAT. All rights reserved.
+    &copy; 2025 Nulcast · A NADSTAT Project
   </footer>
 </body>
 </html>
