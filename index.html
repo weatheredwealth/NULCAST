@@ -1,44 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nulcast – Down With Ads</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg: #111;
+      --fg: #f2f2f2;
+      --accent: #ccc;
+      --max-width: 900px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      padding: 0 20px;
+      background: linear-gradient(to bottom, #000, #1a1a1a);
+      color: var(--fg);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      padding: 0;
     }
 
     header {
-      padding: 80px 0 40px;
       text-align: center;
+      padding: 80px 20px 40px;
     }
 
     header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
+      font-size: 3.2rem;
+      font-weight: 600;
+      margin: 0;
+      color: #fff;
     }
 
     header p {
       font-size: 1.2rem;
-      color: #ccc;
+      color: var(--accent);
+      margin-top: 10px;
     }
 
     section {
-      max-width: 800px;
+      max-width: var(--max-width);
       margin: 60px auto;
+      padding: 0 20px;
     }
 
     h2 {
       font-size: 2rem;
       margin-bottom: 10px;
-      border-bottom: 1px solid #444;
-      padding-bottom: 5px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 6px;
     }
 
     a {
@@ -46,26 +62,41 @@
       text-decoration: underline;
     }
 
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: none;
+    ul {
+      padding-left: 20px;
     }
 
     footer {
       text-align: center;
+      color: #777;
+      padding: 60px 20px;
       font-size: 0.9rem;
-      color: #666;
-      margin: 80px 0 40px;
+    }
+
+    /* GoFundMe Widget Section */
+    .donate-section {
+      background: #1c1c1c;
+      padding: 40px 20px;
+      border-radius: 12px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .donate-section h2 {
+      margin-bottom: 20px;
+    }
+
+    .gfm-embed {
+      margin-top: 20px;
+      max-width: 100%;
     }
 
     @media (max-width: 600px) {
       header h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
-
-      iframe {
-        height: 400px;
+      h2 {
+        font-size: 1.5rem;
       }
     }
   </style>
@@ -74,50 +105,48 @@
 
   <header>
     <h1>Nulcast</h1>
-    <p>Advertising is over.</p>
+    <p>Removing ads from public space. Permanently.</p>
   </header>
 
   <section>
     <h2>What Is Nulcast?</h2>
     <p>
-      Nulcast is a movement to eliminate advertising from everyday life. We purchase ad space—billboards, signs, online banners—and leave them blank or display simple white text on a black background: <strong>“There are no ads here.”</strong>
+      Nulcast is a project by NADSTAT to reclaim public attention. We use donations to purchase advertising space—then leave it empty.
     </p>
     <p>
-      Owned by <strong>NADSTAT</strong>, a company dedicated to disrupting traditional advertising and reclaiming public attention, Nulcast is our frontline project in this fight.
+      Billboards. Bus stops. Online banners. Instead of noise, we leave behind clarity.
     </p>
   </section>
 
   <section>
-    <h2>Why We’re Doing This</h2>
+    <h2>Why We're Doing It</h2>
     <p>
-      Countless studies show advertising contributes to stress, overconsumption, body image issues, and digital addiction. By removing ads, we aim to give people space—mental and physical—to breathe, reflect, and reclaim autonomy.
+      Advertising overload contributes to stress, anxiety, and constant distraction. By removing ads, we return mental and physical space to the public.
     </p>
     <p>
-      This is not anti-business. It’s pro-human. Want proof? <a href="#studies">Scroll down for the research.</a>
+      This is not anti-business—it's pro-human. 
     </p>
   </section>
 
   <section id="studies">
-    <h2>Research on Advertising's Harm</h2>
+    <h2>Research on Ad Harm</h2>
     <ul>
       <li><a href="https://www.apa.org/news/press/releases/stress/2022/state-of-mental-health" target="_blank">APA: Chronic Stress & Media Overload</a></li>
-      <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8100152/" target="_blank">NIH: Ad Exposure & Mental Health Correlation</a></li>
+      <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8100152/" target="_blank">NIH: Ad Exposure & Mental Health</a></li>
       <li><a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2019.00268/full" target="_blank">Frontiers in Psychology: Ads and Body Image</a></li>
-      <li><a href="https://www.tandfonline.com/doi/abs/10.1080/13527266.2017.1392923" target="_blank">The Power of Outdoor Ads on Cognitive Load</a></li>
+      <li><a href="https://www.tandfonline.com/doi/abs/10.1080/13527266.2017.1392923" target="_blank">Cognitive Load from Outdoor Ads</a></li>
     </ul>
   </section>
 
-  <section>
+  <section class="donate-section">
     <h2>Help Us Fund It</h2>
-    <p>
-      We rely on donations to buy ad space and keep it blank. Every dollar helps us remove another ad.
-    </p>
-    <!-- Replace with your actual GoFundMe embed link -->
-    <iframe src="https://www.gofundme.com/f/YOUR-CAMPAIGN-ID/widget/large" title="GoFundMe Donation Widget"></iframe>
+    <p>Every dollar removes another ad from the world. Join the movement.</p>
+    <div class="gfm-embed" data-url="https://www.gofundme.com/f/help-nulcast-reclaim-public-spaces/widget/large?sharesheet=undefined&attribution_id=sl:38997f02-7cb1-41f9-a216-7a2a35200a7f"></div>
+    <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
   </section>
 
   <footer>
-    &copy; 2025 Nulcast by NADSTAT. All rights reserved.
+    &copy; 2025 Nulcast — A NADSTAT Project. All rights reserved.
   </footer>
 
 </body>
