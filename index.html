@@ -13,20 +13,23 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: #f9fafb;
-      color: #1d1f21;
+      background: #121417;
+      color: #d0d4db;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      user-select: none;
     }
     a {
-      color: #0071e3;
+      color: #5aa9e6;
       text-decoration: none;
       transition: color 0.3s ease;
     }
-    a:hover {
-      color: #004bb5;
+    a:hover,
+    a:focus {
+      color: #9ac8ff;
       text-decoration: underline;
+      outline: none;
     }
 
     header {
@@ -34,18 +37,19 @@
       margin: 4rem auto 2rem;
       padding: 0 1rem;
       text-align: center;
+      user-select: text;
     }
     header h1 {
       font-weight: 700;
       font-size: 3.5rem;
       margin-bottom: 0.25rem;
       letter-spacing: -0.02em;
-      color: #111;
+      color: #e5e9f0;
     }
     header p {
       font-weight: 400;
       font-size: 1.25rem;
-      color: #555;
+      color: #8a90a0;
       margin-top: 0;
     }
 
@@ -64,7 +68,7 @@
     }
     nav a:hover,
     nav a:focus {
-      border-color: #0071e3;
+      border-color: #5aa9e6;
       outline: none;
     }
 
@@ -72,19 +76,20 @@
       max-width: 700px;
       margin: 0 auto 4rem;
       padding: 0 1rem;
+      user-select: text;
     }
     section h2 {
       font-weight: 600;
       font-size: 2rem;
       margin-bottom: 1rem;
-      color: #222;
-      border-left: 4px solid #0071e3;
+      color: #e5e9f0;
+      border-left: 4px solid #5aa9e6;
       padding-left: 0.75rem;
     }
     section p {
       font-weight: 400;
       font-size: 1.125rem;
-      color: #444;
+      color: #b0b6c1;
       margin-top: 0;
       line-height: 1.5;
     }
@@ -99,24 +104,26 @@
       font-size: 1.125rem;
     }
     .research a {
-      color: #0071e3;
+      color: #5aa9e6;
       font-weight: 500;
     }
 
     .donate-section {
-      background: #0071e3;
+      background: #1b2a47;
       border-radius: 10px;
       padding: 2.5rem 1.5rem;
-      color: #fff;
+      color: #d0d4db;
       text-align: center;
-      box-shadow: 0 10px 25px rgba(0,113,227,0.3);
+      box-shadow: 0 10px 30px rgba(26, 42, 71, 0.7);
       max-width: 700px;
       margin: 0 auto 4rem;
+      user-select: text;
     }
     .donate-section h2 {
       font-size: 2.25rem;
       margin-bottom: 0.5rem;
       font-weight: 700;
+      color: #a8c1ff;
     }
     .donate-section p {
       font-size: 1.125rem;
@@ -126,7 +133,7 @@
     .gfm-embed {
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
       max-width: 500px;
       margin: 0 auto;
     }
@@ -135,7 +142,7 @@
       max-width: 900px;
       margin: 0 auto 3rem;
       padding: 1rem 1rem 0;
-      color: #888;
+      color: #6e7380;
       font-size: 0.9rem;
       text-align: center;
       user-select: none;
