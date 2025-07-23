@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nulcast</title>
+  <title>Nulcast – Erasing the Noise</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --black: #0d0d0d;
-      --white: #f9f9f9;
-      --gray: #aaaaaa;
-      --dark-gray: #1a1a1a;
-      --accent: #00fff7;
+      --bg-gradient-start: #1e3c72;
+      --bg-gradient-end: #2a5298;
+      --text-primary: #ffffff;
+      --text-secondary: #d1d5db;
+      --accent: #00ffe5;
+      --highlight: #8dfdff;
+      --section-bg: #101820;
     }
 
     * {
@@ -21,15 +23,15 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, var(--black), #1e1e1e);
-      color: var(--white);
+      background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+      color: var(--text-primary);
       overflow-x: hidden;
     }
 
     header {
       padding: 100px 20px 60px;
       text-align: center;
-      background: radial-gradient(circle, #1e1e1e 30%, #0d0d0d 100%);
+      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
       border-bottom: 2px solid var(--accent);
     }
 
@@ -37,11 +39,12 @@
       font-size: 4rem;
       font-weight: 800;
       margin-bottom: 10px;
+      color: var(--accent);
     }
 
     header p {
       font-size: 1.4rem;
-      color: var(--gray);
+      color: var(--text-secondary);
     }
 
     nav {
@@ -53,19 +56,22 @@
 
     nav a {
       text-decoration: none;
-      color: var(--accent);
+      color: var(--highlight);
       font-weight: 600;
       transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: white;
+      color: var(--text-primary);
     }
 
     section {
       max-width: 1000px;
       margin: 60px auto;
       padding: 0 20px;
+      background: var(--section-bg);
+      border-radius: 12px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
     }
 
     section h2 {
@@ -73,27 +79,46 @@
       margin-bottom: 20px;
       border-left: 6px solid var(--accent);
       padding-left: 12px;
+      color: var(--highlight);
     }
 
     section p, li {
       font-size: 1.1rem;
-      color: var(--gray);
+      color: var(--text-secondary);
     }
 
     ul {
-      list-style: circle;
-      padding-left: 40px;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin: 10px 0;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 4px solid var(--accent);
+      border-radius: 6px;
+    }
+
+    ul li a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    ul li a:hover {
+      text-decoration: underline;
     }
 
     .donate-section {
-      background: #111;
+      background: #0c1a26;
       padding: 60px 20px;
       border-top: 2px solid var(--accent);
       text-align: center;
     }
 
     .donate-section h2 {
-      color: var(--white);
+      color: var(--text-primary);
     }
 
     .gfm-embed {
@@ -103,10 +128,10 @@
 
     footer {
       padding: 40px 20px;
-      background: #0d0d0d;
+      background: #081018;
       text-align: center;
-      border-top: 2px solid #222;
-      color: var(--gray);
+      border-top: 2px solid #111;
+      color: var(--text-secondary);
       font-size: 0.9rem;
     }
 
@@ -119,12 +144,12 @@
       z-index: -1;
       background-image: repeating-linear-gradient(
         to right,
-        #111 0px,
-        #111 1px,
+        #fff 0px,
+        #fff 1px,
         transparent 1px,
         transparent 50px
       );
-      opacity: 0.04;
+      opacity: 0.02;
     }
 
     @media (max-width: 600px) {
@@ -169,9 +194,10 @@
   <section id="research">
     <h2>Studies on Advertising Harm</h2>
     <ul>
-      <li><a href="https://hbr.org/2020/01/advertising-makes-us-unhappy" target="_blank">HBR: Advertising Makes us Unhappy</a></li>
-      <li><a href="https://www.mqmentalhealth.org/adding-to-the-problem-advertising-and-mental-health/" target="_blank">MQ: Advertising and Mental Health/a></li>
-      <li><a href="https://appliedpsychologydegree.usc.edu/blog/thinking-vs-feeling-the-psychology-of-advertising" target="_blank">USC: The Psychology of Advertising</a></li>
+      <li><a href="https://www.apa.org/news/press/releases/stress/2022/state-of-mental-health" target="_blank">APA – Chronic Stress & Media Overload</a></li>
+      <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8100152/" target="_blank">NIH – Ad Exposure & Mental Health</a></li>
+      <li><a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2019.00268/full" target="_blank">Frontiers in Psychology – Ads and Body Image</a></li>
+      <li><a href="https://www.tandfonline.com/doi/abs/10.1080/13527266.2017.1392923" target="_blank">Taylor & Francis – Cognitive Load from Outdoor Ads</a></li>
     </ul>
   </section>
 
