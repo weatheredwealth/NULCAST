@@ -1,88 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nulcast</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --bg-dark: #121212;
-      --bg-medium: #1e1e1e;
-      --bg-light: #2a2a2a;
-      --text-main: #f0f0f0;
-      --text-muted: #999;
-      --accent: #ffffff;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
+    /* Reset and base */
+    *, *::before, *::after {
       box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
     }
-
     body {
-      background: var(--bg-dark);
-      color: var(--text-main);
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f9fafb;
+      color: #1d1f21;
       line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
-
-    header {
-      background: var(--bg-medium);
-      padding: 2rem;
-      text-align: center;
-      border-bottom: 1px solid #333;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      font-weight: 800;
-    }
-
-    header p {
-      margin-top: 0.5rem;
-      color: var(--text-muted);
-    }
-
-    section {
-      padding: 4rem 2rem;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      font-weight: 600;
-    }
-
-    .research ul {
-      list-style: disc;
-      padding-left: 1.2rem;
-      color: var(--text-muted);
-    }
-
-    .research a {
-      color: var(--accent);
+    a {
+      color: #0071e3;
       text-decoration: none;
+      transition: color 0.3s ease;
     }
-
-    .research a:hover {
+    a:hover {
+      color: #004bb5;
       text-decoration: underline;
     }
 
-    footer {
-      background: var(--bg-medium);
+    header {
+      max-width: 900px;
+      margin: 4rem auto 2rem;
+      padding: 0 1rem;
       text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      border-top: 1px solid #333;
+    }
+    header h1 {
+      font-weight: 700;
+      font-size: 3.5rem;
+      margin-bottom: 0.25rem;
+      letter-spacing: -0.02em;
+      color: #111;
+    }
+    header p {
+      font-weight: 400;
+      font-size: 1.25rem;
+      color: #555;
+      margin-top: 0;
     }
 
+    nav {
+      margin: 2rem auto 4rem;
+      max-width: 700px;
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    nav a {
+      padding-bottom: 0.25rem;
+      border-bottom: 2px solid transparent;
+    }
+    nav a:hover,
+    nav a:focus {
+      border-color: #0071e3;
+      outline: none;
+    }
+
+    section {
+      max-width: 700px;
+      margin: 0 auto 4rem;
+      padding: 0 1rem;
+    }
+    section h2 {
+      font-weight: 600;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #222;
+      border-left: 4px solid #0071e3;
+      padding-left: 0.75rem;
+    }
+    section p {
+      font-weight: 400;
+      font-size: 1.125rem;
+      color: #444;
+      margin-top: 0;
+      line-height: 1.5;
+    }
+
+    .research ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 0.5rem;
+    }
+    .research li {
+      margin-bottom: 1rem;
+      font-size: 1.125rem;
+    }
+    .research a {
+      color: #0071e3;
+      font-weight: 500;
+    }
+
+    .donate-section {
+      background: #0071e3;
+      border-radius: 10px;
+      padding: 2.5rem 1.5rem;
+      color: #fff;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,113,227,0.3);
+      max-width: 700px;
+      margin: 0 auto 4rem;
+    }
+    .donate-section h2 {
+      font-size: 2.25rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+    .donate-section p {
+      font-size: 1.125rem;
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+    }
     .gfm-embed {
-      margin-top: 2rem;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    footer {
+      max-width: 900px;
+      margin: 0 auto 3rem;
+      padding: 1rem 1rem 0;
+      color: #888;
+      font-size: 0.9rem;
+      text-align: center;
+      user-select: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      nav {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+      section h2 {
+        font-size: 1.75rem;
+      }
+      .donate-section {
+        padding: 2rem 1rem;
+      }
+      .donate-section h2 {
+        font-size: 1.75rem;
+      }
     }
   </style>
 </head>
@@ -92,17 +168,28 @@
     <p>Erasing the noise — one blank billboard at a time.</p>
   </header>
 
-  <section>
+  <nav role="navigation" aria-label="Primary navigation">
+    <a href="#mission">About</a>
+    <a href="#why">Why</a>
+    <a href="#research">Research</a>
+    <a href="#donate">Donate</a>
+  </nav>
+
+  <section id="mission" tabindex="-1">
     <h2>Our Mission</h2>
-    <p>Nulcast, a NADSTAT initiative, is reclaiming public space from visual pollution by buying ad space and leaving it intentionally blank. Every empty billboard is a quiet protest against manipulation and over-commercialization. No logos. No slogans. Just space.</p>
+    <p>
+      Nulcast, a NADSTAT initiative, is reclaiming public space from visual pollution by buying ad space and leaving it intentionally blank. Every empty billboard is a quiet protest against manipulation and over-commercialization. No logos. No slogans. Just space.
+    </p>
   </section>
 
-  <section>
+  <section id="why" tabindex="-1">
     <h2>Why It Matters</h2>
-    <p>Studies show that constant advertising can negatively impact mental health, increase anxiety, and reduce attention spans. We aim to bring peace back into our environments — with your help.</p>
+    <p>
+      Studies show that constant advertising can negatively impact mental health, increase anxiety, and reduce attention spans. We aim to bring peace back into our environments — with your help.
+    </p>
   </section>
 
-  <section class="research" id="research">
+  <section class="research" id="research" tabindex="-1">
     <h2>Studies on Advertising Harm</h2>
     <ul>
       <li><a href="https://hbr.org/2020/01/advertising-makes-us-unhappy" target="_blank" rel="noopener noreferrer">HBR: Advertising Makes us Unhappy</a></li>
@@ -111,7 +198,7 @@
     </ul>
   </section>
 
-  <section>
+  <section class="donate-section" id="donate" tabindex="-1">
     <h2>Support the Movement</h2>
     <p>Your donations directly fund ad space that we leave blank. Help us take back visual peace in public spaces.</p>
     <div class="gfm-embed" data-url="https://www.gofundme.com/f/help-nulcast-reclaim-public-spaces/widget/large?sharesheet=undefined&attribution_id=sl:38997f02-7cb1-41f9-a216-7a2a35200a7f"></div>
